@@ -1,0 +1,2906 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+input, .menu {
+    display: none;
+}
+
+header {
+    position: fixed;
+    z-index: 777;
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+    header a {
+        text-decoration: none;
+        color: #444444;
+    }
+
+    header span {
+        border: 2px solid #c7af8a;
+        border-radius: 10px;
+        padding: 4px 10px;
+        color: #444444;
+        cursor: default;
+    }
+
+header .container {
+    width: 1068px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .container > * {
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-family: 'Cuprum', sans-serif;
+    /*    border: 1px solid red;*/
+}
+
+#home {
+    height: 70px;
+    width: auto;
+    position: fixed;
+/*    top: 0;
+    left: 0;*/
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/index-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    padding-bottom: 3%;
+}
+
+.bg_filter1 {
+    background-color: rgba(255,255,255,0.5);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: grayscale(1);
+    position: absolute;
+}
+
+.bg_filter2 {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 65%);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    /*    border: 1px solid red;*/
+    position: relative;
+    left:-10px;
+}
+
+    .logo img {
+        width: 750px;
+        height: 305px;
+    }
+
+    .logo:before {
+        content: 'ОТЕЛЬ-ЗАПОВЕДНИК';
+        color: rgba(0,0,0,0.9);
+        font-size: 25px;
+        font-family: 'Cuprum', sans-serif;
+        position: absolute;
+        top: -45px;
+        left: 61px;
+    }
+
+    .logo:after {
+        content: 'ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ';
+        color: rgba(0,0,0,0.7);
+        font-size: 36px;
+        font-family: 'Cuprum', sans-serif;
+        position: absolute;
+        bottom: -70px;
+        left: 185px;
+    }
+
+.annotation {
+    z-index: 2;
+    display: block;
+    margin-top: 100px;
+    margin-left: 18px;
+}
+
+.annotation img {
+    display: inline-block;
+    float: left;
+    transform: scale(0.9);
+    height: 237px;
+    width: 24px;
+}
+
+.annotation p {
+    margin: 0 0 5px 0;
+    padding: 0;
+    z-index: 50;
+}
+
+.content {
+    display: block;
+    color: rgba(0,0,0,0.7);
+    width: 340px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 0 0 45px;
+}
+
+.price {
+    margin: 20px 0 0 45px;
+    display: block;
+    width: 250px;
+    font-weight: 600;
+    color: #c7af8a;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .price:before {
+        display: block;
+        font-weight: 600;
+        color: #c7af8a;
+        content: 'ОТ';
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .price:after {
+        display: block;
+        font-weight: 600;
+        color: #c7af8a;
+        content: 'в сутки';
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0 0 0 78px;
+    }
+
+.line {
+    border: 3px solid white;
+    outline: 3px solid #c7af8a;
+    display: flex;
+    height: 64px;
+    background-color: #c7af8a;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.obj1, .obj2 {
+    width: 124px;
+    height: 41px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .container {
+    position: relative;
+    margin-left: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 980px;
+}
+
+    .footer .container span {
+        margin: auto 10px auto 0;
+        cursor: default;
+        font-size: 30px;
+        color: black;
+        z-index: 2;
+        opacity: 0.4;
+    }
+
+    .footer .container > * {
+        display: flex;
+        align-items: center;
+        font-family: 'Cuprum', sans-serif;
+    }
+
+    .footer .container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #444444;
+        z-index: 2;
+        opacity: 0.8;
+    }
+
+.calen1, .calen2 {
+    border-radius: 3px;
+    margin: auto 0 auto 0;
+    padding: 0 15px 0 15px;
+    background-color: white;
+    height: 52px;
+}
+
+    .calen1 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+    .calen2 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+
+.calenin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.footer .container .gosti {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    margin: auto 0 auto 0;
+    padding: 0 20px 0 20px;
+    background-color: white;
+    height: 52px;
+}
+
+.gostiin:after {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    content: '1';
+    margin-top: -2px;
+    justify-content: center;
+    color: rgba(0,0,0,0.9);
+}
+
+.gostiin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gosti img {
+    transform: scale(1.1);
+    width: 19px;
+    height: 19px;
+    padding-right: 15px;
+}
+
+.calen1 img, .calen2 img {
+    transform: scale(1.1);
+    width: 23px;
+    height: 23px;
+    padding-right: 15px;
+}
+
+
+.footer .container .search {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    margin: auto 0 auto 0;
+    padding: 0 24px 0 24px;
+    background-color: #FDDA0D;
+    height: 52px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+    transition: 0.2s;
+}
+
+.search:hover {
+    background-color: #fde34e;
+    transition: 0.2s;
+}
+
+.deer {
+    pointer-events: none;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: -230px;
+    left: calc((100% - 1920px)/1.8);
+    transform: scaleX(1.25) scaleY(1.2);
+    overflow: hidden;
+    z-index: 1;
+}
+
+    .deer video {
+        position: absolute;
+        clip-path: url(#clip);
+        transform: none;
+        height: 100%;
+    }
+
+#main > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90%;
+    float: right;
+    position: relative;
+    margin-top: 148px;
+    right: 0;
+}
+
+    #main > .container > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80.5%;
+    }
+
+
+.fog {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /*    background-color: rgba(0,0,0,0.8);*/
+    overflow-x: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fog div {
+    position: absolute;
+    width: 200%;
+    background-size: 50% auto;
+    bottom: 0;
+    right: 0;
+    filter: blur(7px) brightness(2) contrast(2);
+    box-shadow: 0 -20px 10px 8px white inset;
+}
+
+.fog div:first-child {
+    background: url('../img/fog.png') repeat-x;
+    animation: fog 30s linear infinite;
+    opacity: 0.9;
+    height: 100%;
+}
+.fog div:last-child {
+    background: url('../img/fog.png') repeat-x;
+    animation: fog 20s linear infinite;
+    opacity: 0.7;
+    height: 60%;
+}
+
+
+@keyframes fog{
+    from {
+        transform: translateX(0);
+        filter: blur(7px) brightness(2) contrast(2);
+    }
+    50% {
+        transform: translateX(25%);
+        filter: blur(20px) brightness(2) contrast(2);
+    }
+    to {
+        transform: scale(1) translateX(50%);
+        filter: blur(7px) brightness(2) contrast(2);
+    }
+}
+
+body > div > p {
+    text-align: center;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 27px;
+    color: #444444;
+    text-transform: uppercase;
+    margin: 100px 0;
+    position: relative;
+}
+body > div > p:after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background-image: url('../img/h-decor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+header ~ div{
+    overflow: hidden;
+}
+
+.rooms-classes {
+    display: flex;
+    width: 100%;
+    color: #444444;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .rooms-classes > div {
+        width: calc(100%/3);
+        min-width: 420px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+#rooms img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.rooms-classes .description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    min-width: 390px;
+    z-index: 1;
+    top: -100px;
+    background-color: #efedef;
+    font-family: 'Montserrat', sans-serif;
+    cursor: default;
+}
+
+    .rooms-classes .description > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .rooms-classes .description > div:first-child {
+            border-bottom: 1px solid #dfdedf;
+            min-height: 175px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(1) {
+            display: inline-block;
+            font-family: 'Cuprum', sans-serif;
+            font-size: 30px;
+            height: 50%;
+            text-transform: uppercase;
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(2) {
+            font-size: 16px;
+            flex: 2;
+            padding: 20px 15px 20px 0;
+        }
+
+        .rooms-classes .description > div:nth-child(2) div {
+            display: flex;
+            flex-direction: column;
+            width: 33.33%;
+            padding: 8px 15px 8px 15px;
+            border-left: 5px solid #64833f;
+        }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(1) {
+                text-align: left;
+                font-size: 22px;
+                font-weight: 500;
+                position: relative;
+                bottom: -3px;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(2) {
+                text-align: left;
+                font-size: 34px;
+                position: relative;
+                font-weight: 600;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(3) {
+                text-align: right;
+                font-weight: 500;
+                font-size: 22px;
+                position: relative;
+                bottom: 3px;
+            }
+
+.description a {
+    padding: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333333;
+    font-size: 18px;
+    width: 33.33%;
+    background-color: #f8d307;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .description a span {
+        padding: 2.5px 0;
+    }
+
+sup {
+    vertical-align: top;
+    position: relative;
+    top: -3px;
+}
+#vip-rooms {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #vip-rooms .container {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    #vip-rooms .room {
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    #vip-rooms label {
+        padding: 0;
+        opacity: 0.65;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #c7af8a;
+        outline: 3px solid white;
+        box-shadow: 0 0 0 4px #c7af8a;
+        padding: 5px;
+    }
+
+        #vip-rooms label:first-child {
+            left: 43px;
+        }
+
+        #vip-rooms label:last-child {
+            left: -40px;
+        }
+
+        #vip-rooms label:first-child:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid black;
+            border-left: 5px solid black;
+            transform: rotate(-45deg);
+            display: inline-block;
+            position: absolute;
+            top: 52px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        #vip-rooms label:last-child:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid black;
+            border-left: 5px solid black;
+            transform: rotate(135deg);
+            display: inline-block;
+            position: absolute;
+            top: 52px;
+            right: 20px;
+            z-index: 1;
+        }
+
+        #vip-rooms label span {
+            position: absolute;
+            font-family: 'Cuprum', sans-serif;
+            text-transform: uppercase;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            z-index: 1;
+        }
+
+        #vip-rooms label img {
+            width: 180px;
+            height: auto;
+            box-shadow: 0 0 0 6px white;
+            opacity: 0.7;
+        }
+
+    #vip-rooms .room > div {
+        display: flex;
+        z-index: 1;
+        align-items: center;
+        transition: 0.5s;
+        justify-content: center;
+    }
+
+    #vip-rooms .room div > img {
+        height: 450px;
+        width: auto;
+        z-index: 2;
+    }
+
+    #vip-rooms .description {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 360px;
+        height: 354px;
+        padding: 40px;
+        background-color: white;
+        font-size: 15px;
+        color: #444444;
+        font-weight: 500;
+        position: relative;
+        left: -6px;
+        box-shadow: 0 0 0 1px #6b8642 inset;
+        border: 5px solid white;
+        outline: 3px solid #6b8642
+    }
+
+        #vip-rooms .description > span:nth-child(1) {
+            font-family: 'Cuprum', sans-serif;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        #vip-rooms .description > span:nth-child(2) {
+            padding: 30px 0 20px 0;
+            width: 100%;
+        }
+
+        #vip-rooms .description .booking {
+            font-size: 25px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+        }
+
+        #vip-rooms .description b {
+            font-size: 30px;
+            position: relative;
+            top: 5px;
+            padding: 0 10px;
+        }
+
+    #vip-rooms a {
+        background-color: #f8d307;
+        width: 270px;
+        height: 50px;
+        text-decoration: none;
+        position: absolute;
+        bottom: -25px;
+        right: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0,0,0,0.8);
+        font-size: 20px;
+        border: 2px solid white;
+        outline: 1px solid #c7af8a;
+    }
+
+    #vip-rooms li::marker {
+        font-size: 10px;
+        vertical-align: middle;
+    }
+
+    #vip-rooms ul {
+        padding: 0 13px;
+        margin: 0;
+        width: 100%;
+    }
+
+    #vip-rooms li {
+    }
+
+    #vip-rooms input {
+        width: 15px;
+        height: 15px;
+        appearance: none;
+    }
+
+.break {
+    flex-basis: 100%;
+    height: 20px;
+}
+
+#vip-rooms input:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: #887c6991;
+    position: relative;
+    transition: 0.5s;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes btn-in-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes btn-in-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes btn-out-left {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+}
+
+@keyframes btn-out-right {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+}
+
+
+@media screen and (min-width: 1065px) {
+    #vip-rooms input:checked:before {
+        background-color: #395912;
+    }
+
+    #vip-rooms #lux-super-btn:not(:checked) ~ .r1, #vip-rooms #cottage-btn:not(:checked) ~ .r2, #vip-rooms #vip-villa-btn:not(:checked) ~ .r3 {
+        position: absolute;
+        top: 0;
+        left: 33.75px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+        #vip-rooms #lux-super-btn:not(:checked) ~ .r1 > div, #vip-rooms #cottage-btn:not(:checked) ~ .r2 > div, #vip-rooms #vip-villa-btn:not(:checked) ~ .r3 > div {
+            animation: scaling 0.25s linear normal;
+        }
+
+        #vip-rooms #lux-super-btn:not(:checked) ~ .r1 label:first-child, #vip-rooms #cottage-btn:not(:checked) ~ .r2 > label:first-child,
+        #vip-rooms #vip-villa-btn:not(:checked) ~ .r3 > label:first-child {
+            animation: btn-in-left 0.4s ease-out normal;
+        }
+
+        #vip-rooms #lux-super-btn:not(:checked) ~ .r1 label:last-child, #vip-rooms #cottage-btn:not(:checked) ~ .r2 > label:last-child,
+        #vip-rooms #vip-villa-btn:not(:checked) ~ .r3 > label:last-child {
+            animation: btn-in-right 0.4s ease-out normal;
+        }
+
+    #vip-rooms #lux-super-btn:checked ~ .r1 > label:first-child, #vip-rooms #cottage-btn:checked ~ .r2 > label:first-child,
+    #vip-rooms #vip-villa-btn:checked ~ .r3 > label:first-child {
+        animation: btn-out-left 0.6s linear normal;
+    }
+
+    #vip-rooms #lux-super-btn:checked ~ .r1 > label:last-child, #vip-rooms #cottage-btn:checked ~ .r2 > label:last-child,
+    #vip-rooms #vip-villa-btn:checked ~ .r3 > label:last-child {
+        animation: btn-out-right 0.6s linear normal;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    #vip-rooms .container {
+        flex-wrap: wrap;
+    }
+
+    #vip-rooms .room > div {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    #vip-rooms .description {
+        flex-direction: column;
+        width: 620px;
+        height: 250px;
+        padding: 20px;
+        background-color: white;
+        left: 0;
+        top: -6px;
+    }
+
+        #vip-rooms .description > span:nth-child(2) {
+            padding: 15px 0 10px 0;
+        }
+
+    #vip-rooms a {
+        right: 190px;
+    }
+
+    #vip-rooms label {
+        position: relative;
+        top: -180px;
+    }
+}
+
+@media screen and (max-width: 1065px) {
+    #vip-rooms label, #vip-rooms input {
+        display: none;
+    }
+
+    #vip-rooms a {
+        right: 20px;
+        width: 220px;
+    }
+
+    #vip-rooms .room div > img {
+        width: calc(80vw + 20px);
+        height: auto;
+        z-index: 2;
+    }
+
+    #vip-rooms .room > div {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #vip-rooms .description {
+        flex-direction: column;
+        width: 80vw;
+        height: 100%;
+        padding: 20px 0 130px 20px;
+        background-color: white;
+        left: 0;
+        top: -6px;
+        border: none;
+        outline: none;
+    }
+}
+
+#about {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 3px 0;
+    background-image: url('../img/lines.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: local;
+    background-size: 100%;
+    margin-top: 100px;
+}
+.dsblock .cont {
+    padding: 50px 50px 50px 50px;
+    width: 26%;
+    min-width: 500px;
+    margin: 25px auto 0 auto;
+    box-shadow: 0 0 0 1px #c3bb7a inset;
+    border:5px solid white;
+    background-color: white;
+    outline: 3px solid #c3bb7a;
+}
+
+.dsblock .p1 {
+margin: 0 0 10px 0;
+}
+
+.dsblock .p2 {
+margin: 50px 0 40px 0;
+}
+
+.dsblock div:first-child{
+    font-weight: 500;
+    font-family: 'Cuprum', sans-serif;
+    color: #333333;
+    font-size: 30px;
+}
+
+.dsblock div:last-child{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.but a{
+    background-color: #f8d307;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    width: 270px;
+    height: 50px;
+    text-decoration: none;
+    margin: 0 auto 0 auto;
+    display: flex;
+     position: relative;
+     top: -30px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    border: 2px solid white;
+    outline: 1px solid #c7af8a ; 
+}
+
+.fasad {
+    display: flex;
+    width:40%;
+    position: absolute;
+    z-index: -1;
+}
+
+.item {
+width: 218px;
+margin: 0 auto 0 auto;
+}
+
+.item2 {
+width: 218px;
+transform: rotate(180deg);
+margin: 0 auto 50px auto;
+}
+
+.item img {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+.fasad img {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+.fawn {
+    width:30%;
+    right:0;
+    position: absolute;
+    z-index: 2;
+}
+
+.fawn img {
+    padding-top: 40px;
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+#about2 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about2 input {
+    display: none;
+}
+
+#about2 iframe {
+    width: 730px;
+    height: 420px;
+}
+
+#about2 #spring:not(:checked) ~ .spring, #about2 #winter:not(:checked) ~ .winter, #about2 #new-year:not(:checked) ~ .new-year {
+    display: none;
+}
+
+#about2 #spring:checked ~ div .spring, #about2 #winter:checked ~ div .winter, #about2 #new-year:checked ~ div .new-year {
+    border-bottom: 4px solid #c7af8a;
+}
+
+#about2 .container > div {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#about2 label {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    border-bottom: 4px solid white;
+    border-radius: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+    #about2 label span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: black;
+        padding: 10px 0;
+    }
+
+    #about2 label img {
+        height: 90px;
+        width: auto;
+        filter: contrast(1.1);
+    }
+
+#about2 .container div div {
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 33px;
+}
+
+#about2 .prev {
+    transform: rotate(-45deg);
+}
+
+#about2 .next {
+    transform: rotate(135deg);
+}
+
+#about2 .container div > img {
+    height: 50px;
+    width: 68px;
+    margin: 0 40px;
+}
+
+    #about2 .container div > img:first-child {
+        transform: scaleX(-1);
+    }
+
+@media screen and (max-width: 800px) {
+    #about2 input {
+        display: none;
+    }
+
+    #about2 iframe {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    #about2 #spring:not(:checked) ~ .spring, #about2 #winter:not(:checked) ~ .winter, #about2 #new-year:not(:checked) ~ .new-year {
+        display: none;
+    }
+
+    #about2 #spring:checked ~ div .spring, #about2 #winter:checked ~ div .winter, #about2 #new-year:checked ~ div .new-year {
+        border-bottom: 4px solid #c7af8a;
+    }
+
+    #about2 label span {
+        width: 22vw;
+    }
+
+    #about2 label img {
+        width: 22vw;
+        height: auto;
+    }
+
+    #about2 .container div > img {
+        display: none;
+    }
+}
+
+#events {
+    width: 100%;
+}
+
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #444444;
+    position: relative;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    z-index: 0;
+    transition: transform 0.3s;
+    margin: 0 17px 34px 17px;
+}
+
+.event .photo {
+    background-size: 100% 100%;
+    height: 180px;
+    width: 100%;
+}
+
+.event:nth-child(1) .photo {
+    background-image: url('../img/event1.jpg');
+}
+.event:nth-child(2) .photo {
+    background-image: url('../img/event2.jpg');
+}
+.event:nth-child(3) .photo {
+    background-image: url('../img/event3.jpg');
+}
+.event:nth-child(4) .photo {
+    background-image: url('../img/event4.jpg');
+}
+.event:nth-child(5) .photo {
+    background-image: url('../img/event5.jpg');
+}
+
+.event .description {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    height: 220px;
+    padding-top: 15px;
+}
+
+.event .description {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    height: 220px;
+}
+
+.event .description span {
+    padding-left: 20px;
+    cursor: default;
+}
+
+.event .description span:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+}
+
+
+.event .description span:nth-child(2) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: lowercase;
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+}
+
+.event .description span:nth-child(3) {
+    font-family: 'Cuprum', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.opacity {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    padding: 30px 0;
+}
+
+.event:hover ~ .opacity {
+    opacity: 0.5;
+}
+
+.event:hover {
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+#contacts .container {
+    display: flex;
+}
+
+.map {
+    width: 800px;
+    min-width: 350px;
+    height: 600px;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .map img {
+        display: none;
+    }
+
+#contacts > .container {
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+#contacts .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 640px;
+    min-width: 300px;
+}
+
+    #contacts .info > div:first-child img {
+        max-width: 200px;
+        height: auto;
+        transform: scaleX(0.8);
+    }
+
+    #contacts .info > div:first-child > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    #contacts .info > div {
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        color: #444444;
+        font-weight: 500;
+    }
+
+        #contacts .info > div:first-child {
+            flex-direction: column;
+        }
+
+            #contacts .info > div:first-child > div div {
+                max-width: 420px;
+                min-width: 300px;
+                display: flex;
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            #contacts .info > div:first-child span {
+            }
+
+                #contacts .info > div:first-child span:first-child {
+                    font-family: 'Cuprum', sans-serif;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    padding-bottom: 30px;
+                    padding-top: 40px;
+                }
+
+                #contacts .info > div:first-child span:last-child {
+                    line-height: 150%;
+                }
+
+        #contacts .info > div:last-child {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #fdfefd;
+            border: 5px solid rgba(0,0,0,0);
+            outline: 3px solid #c7af8a;
+            box-shadow: 0 0 0 1px #c7af8a inset;
+            padding: 100px 0;
+            position: relative;
+            width: 90%;
+        }
+
+            #contacts .info > div:last-child:before {
+                content: 'КОНТАКТЫ';
+                font-family: 'Cuprum', sans-serif;
+                font-size: 20px;
+                color: #444444;
+                position: absolute;
+                top: 40px;
+                left: 40px;
+            }
+
+            #contacts .info > div:last-child:after {
+                content: '';
+                width: calc(100% - 2px);
+                height: 6px;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                border-left: 1px solid #c7af8a;
+                border-right: 1px solid #c7af8a;
+                background-color: #fdfefd;
+            }
+
+
+            #contacts .info > div:last-child > div {
+                display: flex;
+                flex-direction: column;
+                width: 230px;
+                position: relative;
+            }
+
+
+            #contacts .info > div:last-child img {
+                width: 30px;
+                height: 30px;
+                filter: grayscale(1);
+                transition: filter 0.2s;
+            }
+
+#contacts > .container .container {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 30px;
+    top: -12px;
+    width: calc(100% - 30px);
+}
+
+#contacts .info > div:last-child img:hover {
+    filter: none;
+}
+
+#contacts .info > div:last-child > div span {
+    padding-bottom: 20px;
+    font-size: 15px;
+    padding-left: 30px;
+}
+
+#contacts .info > div:last-child > div:first-child span {
+    position: relative;
+    width: 100%;
+}
+
+    #contacts .info > div:last-child > div:first-child span:before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        background-size: 100% 100%;
+    }
+
+    #contacts .info > div:last-child > div:first-child span:nth-child(1):before {
+        background-image: url('../img/telephone.png');
+    }
+
+    #contacts .info > div:last-child > div:first-child span:nth-child(2):before {
+        background-image: url('../img/mail.png');
+        top: 1px;
+    }
+
+    #contacts .info > div:last-child > div:first-child span:nth-child(3):before {
+        background-image: url('../img/geo.png');
+        transform: scale(1.15);
+    }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 800px) {
+    #contacts .info > div:first-child img {
+        display: none;
+    }
+
+    #contacts .info > div:first-child > div div {
+        width: 80vw;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    header {
+        background: linear-gradient(white 60%, rgba(0,0,0,0));
+    }
+    #home {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .deer video {
+        display: none;
+    }
+
+    .fog {
+	display: none;
+    }
+
+    .logo:after {
+        font-size: 36px;
+        bottom: -70px;
+        left: 180px;
+    }
+    
+    .deer {
+        background-image: url('../img/deer.png');
+        background-size: 1000px auto;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: top -110px left -80px;
+        overflow: hidden;
+        z-index: 1;
+    }
+    #vip-rooms label span {
+        display: none;
+    }
+
+    .map img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    #contacts > .container {
+        align-items: flex-start;
+    }
+}
+
+
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    header .container {
+        width: 820px;
+        font-size: 16px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    #home {
+        width: 90px;
+        height: auto;
+    }
+
+#main > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 120px;
+    right: 0;
+}
+
+
+.logo {
+    position: relative;
+    top: -36px;
+}
+
+    .logo img {
+        width: 550px;
+        height: 305px;
+    }
+
+    .logo:before {
+        font-size: 18.5px;
+        top: 8px;
+        left: 45px;
+    }
+
+    .logo:after {
+        font-size: 26px;
+        bottom: -4px;
+        left: 140px;
+    }
+
+.annotation {
+    margin-top: 8px;
+    margin-left: 120px;
+}
+
+.annotation img {
+    transform: scale(0.75);
+}
+
+
+.content {
+    font-size: 14px;
+    margin: 20px 0 0 45px;
+}
+
+.price {
+    margin: 30px 0 0 45px;
+    font-size: 32px;
+}
+
+    .price:before {
+        font-size: 14px;
+    }
+
+    .price:after {
+        font-size: 14px;
+        padding: 0 0 0 68px;
+    }
+
+.deer {
+    pointer-events: none;
+    width: 110%;
+    height: 140%;
+    position: absolute;
+    top: -250px;
+    left: calc((100% - 1920px)/1.9);
+    transform: scaleX(1) scaleY(0.98);
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.line {
+    width: 90%;
+    margin: 0 0 0 auto;
+    border: 3px solid white;
+    outline: 3px solid #c7af8a;
+    display: flex;
+    height: 64px;
+    background-color: #c7af8a;
+    z-index: -2;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.obj1, .obj2 {
+    width: 124px;
+    height: 41px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .container {
+    position: relative;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 830px;
+}
+
+    .footer .container span {
+	margin: 0 3px 0 30px;
+        cursor: default;
+        font-size: 22px;
+        color: black;
+        z-index: 2;
+        opacity: 0.4;
+        min-width: 240px;
+    }
+
+    .footer .container > * {
+        display: flex;
+        align-items: center;
+        font-family: 'Cuprum', sans-serif;
+    }
+
+    .footer .container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #444444;
+        z-index: 2;
+        opacity: 0.8;
+    }
+
+.calen1, .calen2 {
+    border-radius: 3px;
+    padding: 0 10px 0 10px;
+    background-color: white;
+    height: 52px;
+        margin: 0 2px 0 2px;
+}
+
+    .calen1 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+    .calen2 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+
+.calenin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.footer .container .gosti {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    padding: 0 12px 0 12px;
+    background-color: white;
+    height: 52px;
+        margin: 0 2px 0 2px;
+}
+
+.gostiin:after {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    content: '1';
+    margin-top: -2px;
+    justify-content: center;
+    color: rgba(0,0,0,0.9);
+}
+
+.gostiin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gosti img {
+    transform: scale(1);
+    width: 19px;
+    height: 19px;
+    padding-right: 15px;
+}
+
+.calen1 img, .calen2 img {
+    transform: scale(1);
+    width: 23px;
+    height: 23px;
+    padding-right: 15px;
+}
+
+
+.footer .container .search {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    padding: 0 25px 0 25px;
+    margin: 0 auto 0 auto;
+    background-color: #FDDA0D;
+    height: 52px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+    transition: 0.2s;
+        margin: 0 2px 0 2px;
+}
+
+.search:hover {
+    background-color: #fde34e;
+    transition: 0.2s;
+}
+
+
+
+
+.dsblock div:last-child{
+    font-size: 16px;
+}
+
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    header .container {
+        width: 670px;
+        font-size: 16px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    #home {
+        width: 90px;
+        height: auto;
+    }
+
+#main > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 120px;
+    right: 0;
+}
+
+
+.logo {
+    position: relative;
+    top: -36px;
+}
+
+    .logo img {
+        width: 550px;
+        height: 305px;
+    }
+
+    .logo:before {
+        font-size: 18.5px;
+        top: 8px;
+        left: 45px;
+    }
+
+    .logo:after {
+        font-size: 26px;
+        bottom: -4px;
+        left: 140px;
+    }
+
+.annotation {
+    margin-top: 8px;
+    margin-left: 120px;
+}
+
+.annotation img {
+    transform: scale(0.75);
+}
+
+
+.content {
+    font-size: 14px;
+    margin: 20px 0 0 45px;
+}
+
+.price {
+    margin: 30px 0 0 45px;
+    font-size: 32px;
+}
+
+    .price:before {
+        font-size: 14px;
+    }
+
+    .price:after {
+        font-size: 14px;
+        padding: 0 0 0 68px;
+    }
+
+.deer {
+    pointer-events: none;
+    width: 110%;
+    height: 140%;
+    position: absolute;
+    top: -230px;
+    left: calc((100% - 1920px)/1.9);
+    transform: scaleX(0.9) scaleY(0.88);
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.line {
+    width: 100%;
+    margin: 0 0 0 auto;
+    border: 3px solid white;
+    outline: 3px solid #c7af8a;
+    display: flex;
+    height: 64px;
+    background-color: #c7af8a;
+    z-index: -2;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.obj1, .obj2 {
+    width: 124px;
+    height: 41px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .container {
+    position: relative;
+    margin: 0 auto 0 auto;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 830px;
+}
+
+    .footer .container span {
+	margin: 0 3px 0 30px;
+        cursor: default;
+        font-size: 22px;
+        color: black;
+        z-index: 2;
+        opacity: 0.4;
+        min-width: 240px;
+    }
+
+    .footer .container > * {
+        display: flex;
+        align-items: center;
+        font-family: 'Cuprum', sans-serif;
+    }
+
+    .footer .container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #444444;
+        z-index: 2;
+        opacity: 0.8;
+    }
+
+.calen1, .calen2 {
+    border-radius: 3px;
+    padding: 0 10px 0 10px;
+    background-color: white;
+    height: 52px;
+        margin: 0 2px 0 2px;
+}
+
+    .calen1 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+    .calen2 .calenin:after {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        content: '04.03.2019';
+        margin-bottom: -2px;
+        color: rgba(0,0,0,0.9);
+    }
+
+
+.calenin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.footer .container .gosti {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    padding: 0 12px 0 12px;
+    background-color: white;
+    height: 52px;
+        margin: 0 2px 0 2px;
+}
+
+.gostiin:after {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    content: '1';
+    margin-top: -2px;
+    justify-content: center;
+    color: rgba(0,0,0,0.9);
+}
+
+.gostiin {
+    color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gosti img {
+    transform: scale(1);
+    width: 19px;
+    height: 19px;
+    padding-right: 15px;
+}
+
+.calen1 img, .calen2 img {
+    transform: scale(1);
+    width: 23px;
+    height: 23px;
+    padding-right: 15px;
+}
+
+
+.footer .container .search {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    padding: 0 25px 0 25px;
+    margin: 0 auto 0 auto;
+    background-color: #FDDA0D;
+    height: 52px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+    transition: 0.2s;
+        margin: 0 2px 0 2px;
+}
+
+.search:hover {
+    background-color: #fde34e;
+    transition: 0.2s;
+}
+
+#about2 {
+    width: 100%;
+    padding: 3px 0;
+    background-image: url('../img/lines.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+.dsblock .cont {
+    padding: 50px 50px 50px 50px;
+    width: 26%;
+    min-width: 400px;
+    margin: 25px auto 0 auto;
+    box-shadow: 0 0 0 1px #c3bb7a inset;
+    border:5px solid white;
+    background-color: white;
+    outline: 3px solid #c3bb7a;
+}
+
+.dsblock .p1 {
+margin: 0 0 10px 0;
+}
+
+.dsblock .p2 {
+margin: 30px 0 30px 0;
+}
+
+.dsblock span:first-child{
+    font-weight: 500;
+    font-family: 'Cuprum', sans-serif;
+    color: #333333;
+    font-size: 28px;
+}
+
+.dsblock span:last-child{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.but a{
+    background-color: #f8d307;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    width: 270px;
+    height: 50px;
+    text-decoration: none;
+    margin: 0 auto 0 auto;
+    display: flex;
+     position: relative;
+     top: -30px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    border: 2px solid white;
+    outline: 1px solid #c7af8a ; 
+}
+
+.fasad {
+    display: flex;
+    width:40%;
+    position: absolute;
+    z-index: -1;
+}
+
+.item {
+width: 218px;
+margin: 0 auto 0 auto;
+}
+
+.item2 {
+width: 218px;
+transform: rotate(180deg);
+margin: 0 auto 50px auto;
+}
+
+.item img {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+.fasad {
+    display: flex;
+    width:40%;
+    right:720px;
+    position: absolute;
+    z-index: -1;
+}
+
+.fasad img {
+    min-width: 480px;
+}
+
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    header {
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+        header .container {
+            flex-direction: column;
+            width: 300px;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: flex-end;
+            font-size: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0), white 50%);
+            position: relative;
+            padding-top: 60px;
+        }
+
+            header .container a {
+                margin: 40px 20px;
+            }
+
+            header .container div:last-child {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                width: 190px;
+                padding-bottom: 20px;
+            }
+
+    input {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: fixed;
+        z-index: 1000;
+        font-size: 60px;
+        font-family: Arial;
+        right: 0;
+        height: 60px;
+        width: 60px;
+        transform: scaleY(0.6)scaleX(0.8);
+        pointer-events: none;
+    }
+
+    input:checked + .menu {
+        color: #444444;
+    }
+
+    input:not(:checked) ~ header {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .mob-header {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        z-index: 999;
+        background-color: #c3bb7a;
+        transition: 0.3s;
+    }
+
+    #home {
+        height: 60px;
+        width: auto;
+    }
+
+    input:checked ~ .mob-header, input:checked ~ a {
+        opacity: 0;
+    }
+
+    .deer {
+        display: none;
+    }
+        #main > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 105px;
+    right: 0;
+}
+
+        #main > .container > .container {
+            width: 100%;
+        }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo img {
+        width: 80%;
+        height: auto;
+/*        filter: grayscale(1) brightness(0.8);*/
+    }
+
+    .logo:before {
+        display: flex;
+        position: static;
+        margin: 0 auto 5px 14.5%;
+        text-align: left;
+        justify-content: center;
+        content: 'ОТЕЛЬ-ЗАПОВЕДНИК';
+        width: 25%;
+        color: rgba(0,0,0,0.6);
+        font-size: 2.6vw;
+        font-family: 'Cuprum', sans-serif;
+    }
+
+        .logo:after {
+            width: 100%;
+            font-size: 4vw;
+            bottom: -12vw;
+            left: -10%;
+            display: flex;
+            justify-content: flex-end;
+            white-space: pre;
+            content: "ПРЕМИАЛЬНЫЙ ОТДЫХ\0aВ ПОДМОСКОВЬЕ";
+            text-align: right;
+            opacity: 0.6;
+        }
+.annotation {
+    margin-top: 100px;
+    
+}
+.bg_filter1 {
+    background-color: rgba(255,255,255,0.8);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: grayscale(1);
+    position: absolute;
+}
+
+
+        .footer {
+           width: 100%;
+           height: 100%;
+           margin-top: 40px;
+        }
+        .line {
+            margin: 0;
+            height: 100%;
+            background-color: white;
+        }
+        .footer .container {
+            flex-direction:column;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+            .footer .container span {
+                opacity: 0.7;
+            }
+
+.footer .container .gosti {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    width:123.84px;
+    padding: 0 15px 0 15px;
+    background-color:white;
+    border: 2px solid #c3bb7a;
+    height: 52px;
+        margin: 2px auto 0 auto;
+}
+
+.calen1, .calen2 {
+    border-radius: 3px;
+    margin: auto 0 auto 0;
+    padding: 0 15px 0 15px;
+background-color:white;
+    border: 2px solid #c3bb7a;
+    height: 52px;
+}
+
+.gosti img {
+    transform: scale(1);
+    width: 19px;
+    height: 19px;
+    padding-right: 15px;
+padding-left: 25px;
+}
+
+.rooms-classes > div {
+        min-width: 400px;
+    }
+
+
+
+.rooms-classes .description {
+    min-width: 360px;
+    top: -60px;
+}
+
+        .rooms-classes .description > div:first-child {
+            min-height: 160px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(1) {
+            font-size: 30px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(2) {
+            font-size: 14px;
+        }
+
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(1) {
+                font-size: 18px;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(2) {
+                font-size: 30px;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(3) {
+                font-size: 18px;
+            }
+    .fawn {
+        display: none;
+    }
+
+    .map {
+        height: 80vw;
+    }
+
+    .fog {
+    display:none;
+    }
+
+#about2 {
+    width: 100%;
+    padding: 3px 0;
+    background-image: url('../img/lines.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+.dsblock .cont {
+    padding: 30px 30px 30px 30px;
+    width: 60%;
+    min-width: 300px;
+    margin: 30px auto 0 auto;
+    box-shadow: 0 0 0 1px #c3bb7a inset;
+    border:5px solid white;
+    background-color: white;
+    outline: 3px solid #c3bb7a;
+}
+
+.dsblock .p1 {
+margin: 0 0 10px 0;
+}
+
+.dsblock .p2 {
+margin: 30px 0 30px 0;
+}
+
+.dsblock span:first-child{
+    font-weight: 500;
+    font-family: 'Cuprum', sans-serif;
+    color: #333333;
+    font-size: 22px;
+}
+
+.dsblock span:last-child{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.but a{
+    background-color: #f8d307;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    margin: 0 auto 0 auto;
+    display: flex;
+     position: relative;
+     top: -30px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.8);
+    font-size: 18px;
+    border: 2px solid white;
+    outline: 1px solid #c7af8a ; 
+}
+
+.fasad {
+    display: flex;
+    width:40%;
+    position: absolute;
+    z-index: -1;
+}
+
+.item {
+width: 218px;
+margin: 0 auto 0 auto;
+}
+
+.item2 {
+width: 218px;
+transform: rotate(180deg);
+margin: 0 auto 50px auto;
+}
+
+.item img {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+.fasad img {
+    display:none;
+}
+
+.fawn {
+    display:none;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 399px) {
+    header {
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+        header .container {
+            flex-direction: column;
+            width: 300px;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: flex-end;
+            font-size: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0), white 50%);
+            position: relative;
+            padding-top: 60px;
+        }
+
+            header .container a {
+                margin: 40px 20px;
+            }
+
+            header .container div:last-child {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                width: 190px;
+                padding-bottom: 20px;
+            }
+
+    input {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: fixed;
+        z-index: 1000;
+        font-size: 60px;
+        font-family: Arial;
+        right: 0;
+        height: 60px;
+        width: 60px;
+        transform: scaleY(0.6)scaleX(0.8);
+        pointer-events: none;
+    }
+
+    input:checked + .menu {
+        color: #444444;
+    }
+
+    input:not(:checked) ~ header {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .mob-header {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        z-index: 999;
+        background-color: #c3bb7a;
+        transition: 0.3s;
+    }
+
+    #home {
+        height: 60px;
+        width: auto;
+    }
+
+    input:checked ~ .mob-header, input:checked ~ a {
+        opacity: 0;
+    }
+
+    .deer {
+        display: none;
+    }
+    #main > .container {
+        width: 100%;
+    margin-top: 105px;
+    }
+
+        #main > .container > .container {
+            width: 100%;
+        }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        left: 0;
+    }
+    .logo img {
+        width: 84%;
+        height: auto;
+/*        filter: grayscale(1) brightness(0.8);*/
+    }
+
+    .logo:before {
+        display: flex;
+        position: static;
+        margin: 0 auto 5px 13%;
+        text-align: left;
+        justify-content: center;
+        content: 'ОТЕЛЬ-ЗАПОВЕДНИК';
+        width: 25%;
+        color: rgba(0,0,0,0.6);
+        font-size: 2.8vw;
+        font-family: 'Cuprum', sans-serif;
+    }
+
+        .logo:after {
+            width: 100%;
+            font-size: 20px;
+            bottom: -60px;
+            left: -8%;
+            display: flex;
+            justify-content: flex-end;
+            white-space: pre;
+            content: "ПРЕМИАЛЬНЫЙ ОТДЫХ\0aВ ПОДМОСКОВЬЕ";
+            text-align: right;
+            opacity: 0.6;
+        }
+.annotation {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 250px;
+    margin-bottom: 20px;
+    justify-content:center;
+}
+
+.annotation img {
+    display:none;
+}
+
+
+.content {
+    color: rgba(0,0,0,0.6);
+    font-size: 13px;
+    width: 250px;
+    margin: 20px auto 0 auto;
+}
+
+.annotation p{
+margin: 0 0 2px 0;
+}
+
+.first1 {
+text-align-last: justify;
+}
+
+.last {
+text-align-last: left;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    margin: 35px auto 0 auto;
+    font-size: 30px;
+}
+
+
+    .price:before {
+    display: flex;
+        font-size: 14px;
+    }
+
+    .price:after {
+    display: flex;
+        font-size: 14px;
+        padding: 0 0 0 62px;
+    }
+.bg_filter1 {
+    background-color: rgba(255,255,255,0.8);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: grayscale(1);
+    position: absolute;
+}
+
+
+        .footer {
+           width: 100%;
+           height: 100%;
+           margin-top: 40px;
+        }
+        .line {
+            margin: 0;
+            height: 100%;
+            background-color: white;
+        }
+        .footer .container {
+            flex-direction:column;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+            .footer .container span {
+                margin: 0 auto 0 auto;
+        cursor: default;
+        font-size: 26px;
+        color: black;
+        z-index: 2;
+            }
+
+.footer .container .gosti {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    width:123.84px;
+    padding: 0 15px 0 15px;
+    background-color:white;
+    border: 2px solid #c3bb7a;
+    height: 52px;
+        margin: 2px auto 0 auto;
+}
+
+.calen1, .calen2 {
+    border-radius: 3px;
+    margin: auto 0 auto 0;
+    padding: 0 15px 0 15px;
+background-color:white;
+    border: 2px solid #c3bb7a;
+    height: 52px;
+}
+
+.gosti img {
+    transform: scale(1);
+    width: 19px;
+    height: 19px;
+    padding-right: 15px;
+padding-left: 25px;
+}
+
+.rooms-classes > div {
+        min-width: 280px;
+        flex:1;
+    }
+
+
+
+.rooms-classes .description {
+    min-width: 260px;
+    top: -60px;
+}
+
+        .rooms-classes .description > div:first-child {
+            min-height: 140px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(1) {
+            font-size: 24px;
+            padding: 0 20px;
+        }
+
+        .rooms-classes .description > div:nth-child(1) span:nth-child(2) {
+            font-size: 12px;
+            padding: 10px 15px 10px 0;
+        }
+
+        .rooms-classes .description > div:nth-child(2) div {
+            padding: 5px 15px 5px 15px;
+        }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(1) {
+                font-size: 14px;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(2) {
+                font-size: 25px;
+            }
+
+            .rooms-classes .description > div:nth-child(2) div span:nth-child(3) {
+                font-size: 14px;
+            }
+
+
+
+.description a {
+    font-size: 14px;
+}
+
+    .map {
+        height: 80vw;
+    }
+
+.fog {
+display:none;
+}
+
+
+#about2 {
+    width: 100%;
+    padding: 3px 0;
+    background-image: url('../img/lines.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+.dsblock .cont {
+    padding: 20px 20px 20px 20px;
+    width: 26%;
+    min-width: 250px;
+    margin: 30px auto 0 auto;
+    box-shadow: 0 0 0 1px #c3bb7a inset;
+    border:5px solid white;
+    background-color: white;
+    outline: 3px solid #c3bb7a;
+}
+
+.dsblock .p1 {
+margin: 0 0 10px 0;
+}
+
+.dsblock .p2 {
+margin: 30px 0 30px 0;
+}
+
+.dsblock span:first-child{
+    font-weight: 500;
+    font-family: 'Cuprum', sans-serif;
+    color: #333333;
+    font-size: 18px;
+}
+
+.dsblock span:last-child{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.but a{
+    background-color: #f8d307;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+    margin: 0 auto 0 auto;
+    display: flex;
+     position: relative;
+     top: -20px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.8);
+    font-size: 14px;
+    border: 2px solid white;
+    outline: 1px solid #c7af8a ; 
+}
+
+.fasad {
+    display: flex;
+    width:40%;
+    position: absolute;
+    z-index: -1;
+}
+
+.item {
+width: 218px;
+margin: 0 auto 0 auto;
+}
+
+.item2 {
+width: 218px;
+transform: rotate(180deg);
+margin: 0 auto 50px auto;
+}
+
+.item img {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+.fasad img {
+    display:none;
+}
+
+}
